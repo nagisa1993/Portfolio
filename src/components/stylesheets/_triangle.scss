@@ -1,0 +1,11 @@
+@import '_colors.scss';
+@mixin triangle {
+	content:"";
+	display: block;
+	width: 0.5em;
+	height: 0.5em;
+	margin: auto;
+	clip-path: polygon(50% 0, 0 100%, 100% 100%);
+	background-color: $subColor-opa;
+	animation: tri-ani 1s ease-out infinite;
+}

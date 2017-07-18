@@ -1,0 +1,40 @@
+@import '_colors.scss';
+@import '_button.scss';
+
+.app {
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-size: 1.2em;
+  line-height: 1.58;
+  // -webkit-font-smoothing: antialiased;
+  // -moz-osx-font-smoothing: grayscale;
+  color: $fontColor;
+ 	&__menu {
+  	display: flex;
+  	flex-flow: row wrap;
+  	justify-content: center;
+  	margin-bottom: 1em;
+	padding: 1em;
+	&__nav {
+		@include btn_style;
+		text-decoration: none;
+		border: none;
+		border-right: 1px solid $mainColor;
+		color: $mainColor;
+	}
+  }
+}
+
+/* Small screens */
+@media all and (max-width: 500px) {
+	.app {
+	    &__menu {
+	    	flex-direction: column;
+	    	&__nav {
+	    		border: none;
+	    		border-radius: 0;
+	    	}
+	    }
+  	}
+}
+
+

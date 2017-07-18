@@ -1,0 +1,15 @@
+@import '_triangle.scss';
+.experience {
+	padding: 2em;
+	display: grid;
+	grid-template-columns: 1fr 4fr 1fr;
+	h2, p {
+		grid-column: 2/3;
+	}
+	h2:before {
+		@include triangle;
+	}
+	.content {
+		grid-column: 2/3;
+	}
+}

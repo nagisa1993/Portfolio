@@ -1,0 +1,20 @@
+@import '_colors.scss';
+.skill {
+	display: grid;
+	grid-template-columns: 1fr 2fr 1fr;
+	grid-template-rows: minmax(2em, auto) 2fr 1fr;
+	&__tab {
+		text-align: center;
+		grid-column: 2/3;
+		grid-row: 2/3;
+	}
+	&__table {
+		grid-column: 2/3;
+		grid-row: 3/3;
+		height: 2em;
+		padding: 1em;
+		max-width: 40em;
+		column-count: 3;
+		display: inline-block;
+	}
+}
