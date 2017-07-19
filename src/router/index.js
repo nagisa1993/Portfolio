@@ -18,8 +18,6 @@ import Bluelamp from '@/components/projs/Bluelamp'
 Vue.use(Router)
 
 export default new Router({
-  mode: 'history',
-  hashbang: false,
   routes: [
     {
       path: '/',

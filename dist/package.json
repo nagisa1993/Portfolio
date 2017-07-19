@@ -1,0 +1,11 @@
+{
+ "name": "myPortfolio",
+ "version": "1.0.0",
+ "description": "myportfolio test",
+ "author": "mahaiyue",
+ "private": true,
+ "scripts": {
+   "postinstall": "npm install express",
+   "start": "node server.js"
+ }
+}

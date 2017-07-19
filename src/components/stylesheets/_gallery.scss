@@ -1,4 +1,5 @@
 @import './_colors.scss';
+@import '../stylesheets/_button.scss';
 .gallery__project {
   width: 18em;
   min-height: 100%;
@@ -41,5 +42,39 @@
       filter: blur(2px);
       transition: all 0.8s transition-property(all);
     }     
+  }
+}
+
+.gallery__details {
+  text-align: center;
+  padding: 5em;
+  h2 {
+    margin-top: 3em;
+    a {
+      color: $mainColor;
+    }
+  }
+  img {
+    display: block;
+    padding: 2em;
+    width: 80%;
+    height: auto;
+    margin: auto;
+  }
+  button {
+    @include btn_style;
+    float: left;
+  }
+  .keyword {
+    background-color: $mainColor;
+    color: white;
+    width: 7em;
+    height: 1.5em;
+    border-radius: 0.2em 0.2em;
+    font-weight: 0.8em;
+    margin: 1em;
+    padding: 0.2em;
+    display: inline-block;
+    text-align: center;
   }
 }
