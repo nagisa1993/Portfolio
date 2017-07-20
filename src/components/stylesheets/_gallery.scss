@@ -46,6 +46,12 @@
   }
 }
 
+@media all and (max-width: 680px) {
+    .gallery__project {
+      width: 15em;
+    }
+}
+
 .gallery__details {
   text-align: center;
   padding: 5em;

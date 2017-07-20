@@ -5,6 +5,7 @@
 	text-align: center;
 	&__back {
 	  margin: 0px;
+	  margin-bottom: 2em;
 	  padding: 0px;
 	  width: 100%;
 	  height: 400px;
@@ -15,10 +16,10 @@
 	}
 	&__me {
 		display: block;
-		width: 30%;
+		width: 20em;
 		height: auto;
-	  margin: auto;
-	  clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+	  	margin: auto;
+	  	clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
 	  &:after {
 	  	content: '';
 	  	display: block;
@@ -45,6 +46,17 @@
 		color: $mainColor;
 		letter-spacing: 0.1em;
 		font-size: 1.2em;
+	}
+}
+
+@media all and (max-width: 680px) {
+	.main__back {
+		width: 100%;
+		height: 350px;
+	}
+	.main__me {
+		width: 18em;
+		height: auto;
 	}
 }
 

@@ -10,7 +10,7 @@
   </div> -->
     <div class="main">
       <div class="main__back">
-      	<img class="main__me" src="//s3-us-west-1.amazonaws.com/nagisaimage/me.JPG">
+      	<img class="main__me" src="//s3-us-west-1.amazonaws.com/nagisaimage/me.jpg">
         <p>Hi! I'm Haiyue Ma.</p>
       	<h2>Curiosity + Passion + Hardwork = Me!</h2>
       </div>
