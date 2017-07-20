@@ -1,7 +1,7 @@
 <template>
 	<div class="contact" id="contact">
 		<h2>Let's work together.</h2>
-		<form class="contact__form" method="POST" action="http://formspree.io/mahaiyue2017@gmail.com">
+		<form class="contact__form" method="POST" action="https://formspree.io/mahaiyue2017@gmail.com">
 		<input type="text" name="_gotcha" style="display:none" />
 			<div>
 				<label for="name">Name <i>*</i></label>
