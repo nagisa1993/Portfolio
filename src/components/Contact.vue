@@ -23,8 +23,8 @@
 	      <a href="https://github.com/nagisa1993" target="_blank"><i class="fa fa-github"></i></a>
 	      <a href="https://www.instagram.com/1130_nagisa/?hl=en" target="_blank"><i class="fa fa-instagram"></i></a>
 	      <a href="https://codepen.io/nagisa1130" target="_blank"><i class="fa fa-codepen"></i></a>
-	      <a target="_blank"><i class="fa fa-file-pdf-o"></i></a>
-	      <p style="font-size: 0.8em;">© 2017 by Haiyue Ma</p>
+	      <a href="https://s3-us-west-1.amazonaws.com/nagisaimage/HaiyueMaResume.pdf" target="_blank"><i class="fa fa-file-pdf-o"></i></a>
+	      <p style="font-size: 0.8em;">&copy; 2017 by Haiyue Ma</p>
     	</div>
 	</div>
 </template>

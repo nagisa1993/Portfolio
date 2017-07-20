@@ -6,10 +6,10 @@
 		</div>
 		
 		<div class="about__intro--long">
-			<p><br><br>I am a master student from Rutgers University, with a bachelor 
+			<p>I am a master student from Rutgers University, with a bachelor 
 			degree in Communication Engineering from Jinan University (Guangzhou, China) 
 			and over 6 years of academic coding experiences (first 3 years in hardware 
-			programming and last 3+ years in software programming).<br><br><br><br>
+			programming and last 3+ years in software programming).<br><br>
 			Yes, I'm new to this industry, especially comparing to those with over 10+ 
 			years' experiences in this area. But I'm hard-working and I like different challenges.
 			I'm proactive in learning new technologies by taking courses online or 

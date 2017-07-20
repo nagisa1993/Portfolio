@@ -66,7 +66,7 @@ $cellN: 10;
 	}
 
 	.skilllist {
-padding-left: 5em;
+		padding-left: 5em;
 		margin: 1em;
 		display: flex;
 		flex-flow: row wrap;
@@ -76,4 +76,10 @@ padding-left: 5em;
 			width: 14.5em;
 		}
 	}
+
+	@media all and (max-width: 500px) {
+	.skilllist {
+		padding-left: 0;
+	}
+}
 </style>

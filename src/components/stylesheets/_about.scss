@@ -3,15 +3,15 @@
 $expertiseN: 4;
 
 .about {
+	margin-top: 3em;
 	display: grid;
-	grid-template-columns: 3em 4fr 3em;
-	grid-template-rows: minmax(2em, 3em) minmax(auto, 2em) 1fr 1fr 1fr;
+	grid-template-columns: 1fr 4fr 1fr;
+	//grid-template-rows: minmax(2em, 3em) minmax(auto, 2em) 1fr 1fr 1fr;
 	&__intro--short {
 		text-align: center;
 		margin: 2em;
-		padding-top: 2em;
 		grid-column: 2/3; 
-		grid-row: 2/3;
+		//grid-row: 2/3;
 		h2:before {
 			@include triangle;
 		}
@@ -19,20 +19,21 @@ $expertiseN: 4;
 
 	&__intro--long {
 		grid-column: span 3;
-		grid-row: 3/4;
+		//grid-row: 3/4;
 		background-color: $subColor-opa;
 		padding: 2em;
-		display: grid;
-		grid-template-columns: 3em 2fr 3em;
+		// display: grid;
+		// grid-template-columns: 3em 2fr 3em;
 		p {
-			grid-column: 2/3;
+			//grid-column: 2/3;
+			padding: 2em;
 		}
 	}
 
 	&__expertise {
 		text-align: center;
 		grid-column: span 3;
-		grid-row: 4/5;
+		//grid-row: 4/5;
 		padding-top: 2em;
 		padding-bottom: 2em;
 		padding-left: 3em;
@@ -59,7 +60,7 @@ $expertiseN: 4;
 
 	&__skill {
 		grid-column: 2/3;
-		grid-row: 5/5;
+		//grid-row: 5/5;
 		padding-top: 5em;
 		text-align: center;
 		border-bottom: 1px solid $subColor-opa;

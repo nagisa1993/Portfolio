@@ -1,26 +1,23 @@
 <template> 
   <transition name="modal">
-    <div class="modal-mask">
-      <div class="modal-wrapper">
-        <div class="modal-container">
-
-          <div class="modal-header">
-            <button class="modal-default-button" @click="$emit('close')">Back</button>
-            <slot name="header">
-              default header
-            </slot>
+    <div class="modal__mask">
+      <div class="modal__mask__wrapper">
+        <div class="modal__container">
+          <button @click="$emit('close')">Back</button>
+          <div class="modal__container__header">
+            <h2><a :href="detail.href" target="_blank">{{detail.name}}</a></h2>
           </div>
 
-          <div class="modal-body">
-            <slot name="body">
-              default body
-            </slot>
-          </div>
-
-          <div class="modal-footer">
-            <slot name="footer">
-              default footer
-            </slot>
+          <div class="modal__container__body">
+            <p>{{detail.time}}</p>
+            <div v-for="keyword in detail.keywords" class="keyword">{{keyword}}
+            </div>
+            <img :src="detail.src1">
+            <p>{{detail.intro}}</p>
+            <img :src="detail.src2">
+            <br>
+            <p>{{detail.role}}</p>
+            <p>{{detail.learn}}</p>
           </div>
         </div>
       </div>
@@ -30,72 +27,11 @@
 
 <script>
   export default {
-    name: 'modal'
+    name: 'modal',
+    props: ['detail']
   }
 </script>
 
-<style>
-  .modal-mask {
-  position: fixed;
-  z-index: 9998;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, .5);
-  display: table;
-  transition: opacity .3s ease;
-}
-
-.modal-wrapper {
-  display: table-cell;
-  vertical-align: middle;
-}
-
-.modal-container {
-  width: 300px;
-  margin: 0px auto;
-  padding: 20px 30px;
-  background-color: #fff;
-  border-radius: 2px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, .33);
-  transition: all .3s ease;
-  font-family: Helvetica, Arial, sans-serif;
-}
-
-.modal-header h3 {
-  margin-top: 0;
-  color: #42b983;
-}
-
-.modal-body {
-  margin: 20px 0;
-}
-
-.modal-default-button {
-  float: right;
-}
-
-/*
- * The following styles are auto-applied to elements with
- * transition="modal" when their visibility is toggled
- * by Vue.js.
- *
- * You can easily play with the modal transition by editing
- * these styles.
- */
-
-.modal-enter {
-  opacity: 0;
-}
-
-.modal-leave-active {
-  opacity: 0;
-}
-
-.modal-enter .modal-container,
-.modal-leave-active .modal-container {
-  -webkit-transform: scale(1.1);
-  transform: scale(1.1);
-}
+<style lang="scss" scoped>
+@import '../components/stylesheets/_modal.scss';
 </style>
