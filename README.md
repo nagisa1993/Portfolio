@@ -1,5 +1,5 @@
 # my-portfolio
-See my portfolio at [haiyuehello.me](haiyuehello.me)
+See my portfolio at [haiyuehello.me](https://haiyuehello.me)
 
 ## Build Setup
 
