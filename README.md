@@ -1,6 +1,5 @@
-# my-profolio
-
-> my profolio based on vue.js, webpack and sass
+# my-portfolio
+See my portfolio at [haiyuehello.me](haiyuehello.me)
 
 ## Build Setup
 
