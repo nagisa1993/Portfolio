@@ -2,6 +2,8 @@ var path = require('path')
 var utils = require('./utils')
 var config = require('../config')
 var vueLoaderConfig = require('./vue-loader.conf')
+var MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const { VueLoaderPlugin } = require("vue-loader");
 
 function resolve (dir) {
   return path.join(__dirname, '..', dir)
@@ -14,9 +16,21 @@ module.exports = {
   output: {
     path: config.build.assetsRoot,
     filename: '[name].js',
+    chunkFilename: '[name].bundle.js',
     publicPath: process.env.NODE_ENV === 'production'
       ? config.build.assetsPublicPath
       : config.dev.assetsPublicPath
+  },
+  optimization: {
+    splitChunks: {
+      cacheGroups: {
+        vendor: {
+          test: /node_modules\/.*/,
+          name: 'vendors',
+          chunks: 'all',
+        },
+      },
+    },
   },
   resolve: {
     extensions: ['.js', '.vue', '.json'],
@@ -38,6 +52,16 @@ module.exports = {
         include: [resolve('src'), resolve('test')]
       },
       {
+        test: /\.s(a|c)ss$/,
+        use: [
+          process.env.NODE_ENV !== 'production'
+            ? 'vue-style-loader'
+            : MiniCssExtractPlugin.loader,
+          'css-loader',
+          'sass-loader'
+        ]
+      },
+      {
         test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
         loader: 'url-loader',
         options: {
@@ -54,5 +78,8 @@ module.exports = {
         }
       }
     ]
-  }
+  },
+  plugins: [
+    new VueLoaderPlugin()
+  ]
 }
